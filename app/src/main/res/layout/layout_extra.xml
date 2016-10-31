@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    tools:context="com.android.asel.ej10layoutsextra1.LayoutExtraActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <TextView
+        android:text="@string/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewTitulo"
+        android:background="@color/colorAzul"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorVerde"
+        android:layout_below="@id/textViewTitulo"
+        android:id="@+id/relativeLayoutUsuario">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/user2"
+            android:id="@+id/imageViewUsuario"
+            android:layout_weight="1"
+            android:background="@color/colorVerde"
+            android:paddingTop="10dp"/>
+
+        <TextView
+            android:text="@string/usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewNameUser"
+            android:layout_weight="1"
+            android:background="@color/colorVerde"
+            android:layout_toRightOf="@id/imageViewUsuario"
+            android:textAlignment="center"
+            android:padding="10dp"/>
+
+        <TextView
+            android:text="@string/descripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewDescription"
+            android:layout_weight="1"
+            android:background="@color/colorVerde"
+            android:layout_toEndOf="@id/imageViewUsuario"
+            android:layout_below="@id/textViewNameUser"
+            android:textAlignment="textStart"
+            android:padding="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayoutContainer"
+        android:paddingBottom="30dp"
+        android:background="@color/colorAzul"
+        android:layout_below="@+id/relativeLayoutUsuario"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@color/colorCian"
+            android:id="@+id/linearLayoutButtons">
+
+            <Button
+                android:text="@string/verperfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonProfile" />
+
+            <Button
+                android:text="@string/cargarinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonInfo" />
+
+            <Button
+                android:text="@string/actualizar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonUpdate" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayoutFindMe"
+            android:background="@color/colorCaqui"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/linearLayoutButtons"
+            android:layout_toEndOf="@+id/linearLayoutButtons"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/map"
+                android:id="@+id/imageView2" />
+
+            <Button
+                android:text="@string/localizame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonFindMe"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:text="@string/textolargo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewExample"
+        android:layout_below="@id/relativeLayoutContainer"
+        android:background="@color/colorCaqui"
+        android:textColor="@color/colorTextoRojo"/>
+
+</RelativeLayout>
