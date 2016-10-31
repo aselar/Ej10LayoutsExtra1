@@ -2,10 +2,12 @@
     <string name="app_name">Ej10LayoutsExtra1</string>
     <string name="titulo">Titulo Centrado</string>
     <string name="usuario">Nombre del Usuario</string>
-    <string name="descripcion">Descripciondel estado del usuario que ocupa 2-3 lineas completas</string>
+    <string name="descripcion">Descripcion del estado del usuario que ocupa 2&#8211;3 lineas completas</string>
     <string name="verperfil">Ver Perfil</string>
     <string name="cargarinfo">Cargar Info</string>
     <string name="actualizar">Actualizar</string>
     <string name="localizame">Localizame!</string>
     <string name="textolargo">Esto es un ejemplo de texto largo encapsulado en un TextView</string>
+    <string name="descripcionuser">Descripcion de imagen de user</string>
+    <string name="descripcionmapa">Descripcion de imagen de mapa</string>
 </resources>

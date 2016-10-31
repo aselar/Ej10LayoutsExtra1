@@ -9,6 +9,7 @@
 
     <TextView
         android:text="@string/titulo"
+        android:textSize="15sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textViewTitulo"
@@ -27,29 +28,29 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/user2"
+            app:srcCompat="@drawable/user"
             android:id="@+id/imageViewUsuario"
-            android:layout_weight="1"
             android:background="@color/colorVerde"
-            android:paddingTop="10dp"/>
+            android:paddingTop="10dp"
+            android:contentDescription="@string/descripcionuser"/>
 
         <TextView
             android:text="@string/usuario"
+            android:textSize="15sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textViewNameUser"
-            android:layout_weight="1"
             android:background="@color/colorVerde"
-            android:layout_toRightOf="@id/imageViewUsuario"
+            android:layout_toEndOf="@id/imageViewUsuario"
             android:textAlignment="center"
             android:padding="10dp"/>
 
         <TextView
             android:text="@string/descripcion"
+            android:textSize="15sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textViewDescription"
-            android:layout_weight="1"
             android:background="@color/colorVerde"
             android:layout_toEndOf="@id/imageViewUsuario"
             android:layout_below="@id/textViewNameUser"
@@ -60,11 +61,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/relativeLayoutContainer"
+        android:id="@+id/relativeLayout"
         android:paddingBottom="30dp"
         android:background="@color/colorAzul"
         android:layout_below="@+id/relativeLayoutUsuario"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
         <LinearLayout
@@ -73,25 +73,31 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:background="@color/colorCian"
-            android:id="@+id/linearLayoutButtons">
+            android:id="@+id/linearLayoutBotones">
 
             <Button
                 android:text="@string/verperfil"
+                android:textSize="15sp"
+                android:textAllCaps="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/buttonProfile" />
+                android:id="@+id/buttonPerfil"/>
 
             <Button
                 android:text="@string/cargarinfo"
+                android:textSize="15sp"
+                android:textAllCaps="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/buttonInfo" />
+                android:id="@+id/buttonInfo"/>
 
             <Button
                 android:text="@string/actualizar"
+                android:textSize="15sp"
+                android:textAllCaps="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/buttonUpdate" />
+                android:id="@+id/buttonActualizar"/>
         </LinearLayout>
 
         <LinearLayout
@@ -101,21 +107,23 @@
             android:id="@+id/linearLayoutFindMe"
             android:background="@color/colorCaqui"
             android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/linearLayoutButtons"
-            android:layout_toEndOf="@+id/linearLayoutButtons"
+            android:layout_toEndOf="@+id/linearLayoutBotones"
             android:padding="10dp">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/map"
-                android:id="@+id/imageView2" />
+                android:id="@+id/imageViewMapa"
+                android:contentDescription="@string/descripcionmapa"/>
 
             <Button
                 android:text="@string/localizame"
+                android:textSize="15sp"
+                android:textAllCaps="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/buttonFindMe"
+                android:id="@+id/buttonLocalizame"
                 android:layout_gravity="center"/>
 
         </LinearLayout>
@@ -126,9 +134,10 @@
         android:text="@string/textolargo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textViewExample"
-        android:layout_below="@id/relativeLayoutContainer"
+        android:id="@+id/textViewTextoLargo"
+        android:layout_below="@id/relativeLayout"
         android:background="@color/colorCaqui"
-        android:textColor="@color/colorTextoRojo"/>
+        android:textColor="@color/colorTextoRojo"
+        android:lines="1"/>
 
 </RelativeLayout>
